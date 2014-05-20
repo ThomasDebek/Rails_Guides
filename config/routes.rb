@@ -7,6 +7,10 @@ AppBlog::Application.routes.draw do
   resources :articles
    root 'welcome#index'
 
+  resources :articles do
+    resources :comments
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
